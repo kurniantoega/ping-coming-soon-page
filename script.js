@@ -5,7 +5,7 @@ const errorMsg = document.querySelector(".error-msg");
 form.addEventListener("submit", function (ev) {
   ev.preventDefault();
 
-  if (email.value === "") {
+  if (email.value.trim() === "") {
     email.style.outlineColor = "red";
     errorMsg.textContent = "Email cannot be empty";
   } else if (!isEmailvalid(email.value)) {
